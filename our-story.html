@@ -1,41 +1,419 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Our Story</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Our Story</title>
-</head>
-
-<body>
-  <section class="h-screen relative">
-    <!-- background image  -->
-    <div class=" absolute inset-0">
-      <img src="./image" 
-      class=" w-full h-[700px] object-cover"
-      alt="">
-      <!-- overlay -->
-      <div class="absolute inset-0 bg-black/90"></div>
-    </div>
+  <body>
+    <section class="relative z-50">
+      <!-- background image  -->
+      <div class="absolute inset-0">
+        <img
+          src="./images/our-story-bg.jpg"
+          class="w-full h-full object-cover bg-no-repeat"
+          alt=""
+        />
+        <!-- overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
       <!-- gradient colour -->
-       <div class="bg-gradient-to-r bg-black from-[#132729] to-[#020706] absolute inset-0"></div>
-    <div>
+      <!-- <div class="bg-gradient-to-r bg-black/30 from-[#132729] to-[#020706]/ absolute inset-0 "></div> -->
+      <!-- content -->
+      <div class="relative z-10">
+        <!-- header -->
+        <header class="text-white sticky top-0 z-20">
+          <div class="max-w-6xl mx-auto px-5 py-4">
+            <div
+              class="shadow shadow-white rounded-xl bg-black/30 backdrop-blur-sm"
+            >
+              <div class="flex justify-between items-center gap-4 p-3">
+                <div>
+                  <img class="h-[50px]" src="./images/logo-1.svg" alt="logo" />
+                </div>
+                <!-- nav links -->
+                <nav class="flex items-center gap-3">
+                  <ul class="lg:flex hidden items-center gap-5">
+                    <li class="cursor-pointer">Home</li>
+                    <li class="cursor-pointer">Our Story</li>
+                    <li class="cursor-pointer">Menu</li>
+                    <li class="cursor-pointer">Gallery</li>
+                    <li class="cursor-pointer">Contact us</li>
+                  </ul>
+                  <div class="lg:flex hidden items-center gap-3">
+                    <button
+                      class="bg-white text-base uppercase rounded-2xl py-2 px-4 text-black ml-3"
+                    >
+                      place an order
+                    </button>
+                    <div
+                      class="flex items-center gap-2 bg-[#202023] rounded-2xl px-4 py-2"
+                    >
+                      <div>
+                        <img
+                          class="h-[20px]"
+                          src="./images/cart-add.svg"
+                          alt="cart"
+                        />
+                      </div>
+                      <div class="flex flex-col items-center">
+                        <h2 class="font-semibold">R240</h2>
+                        <p class="text-sm">0 orders</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- harmbugger -->
+                  <div id="harmbugger" class="lg:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M3 6h18M3 12h18M3 18h18"
+                      />
+                    </svg>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <!-- drop down -->
+            <div class="bg-black/50 h-full w-full lg:hidden block rounded-lg">
+              <div
+                id="mobile"
+                class="hide flex flex-col items-center gap-4 py-[50px]"
+              >
+                <ul class="flex flex-col items-center gap-5 text-lg">
+                  <li class="cursor-pointer hover:opacity-80">Home</li>
+                  <li class="cursor-pointer hover:opacity-80">Our Story</li>
+                  <li class="cursor-pointer hover:opacity-80">Menu</li>
+                  <li class="cursor-pointer hover:opacity-80">Gallery</li>
+                  <li class="cursor-pointer hover:opacity-80">Contact us</li>
+                </ul>
+                <div class="flex flex-col items-center gap-5 mt-3">
+                  <button
+                    class="bg-white text-base uppercase rounded-2xl py-2 px-4 text-black ml-3"
+                  >
+                    place an order
+                  </button>
+                  <div
+                    class="flex items-center gap-2 bg-[#202023] rounded-2xl px-4 py-2"
+                  >
+                    <div>
+                      <img
+                        class="h-[20px]"
+                        src="./images/cart-add.svg"
+                        alt="cart"
+                      />
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <h2 class="font-semibold">R240</h2>
+                      <p class="text-sm">0 orders</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- welcome 360  -->
+            <div
+              class="flex flex-col justify-center gap-4 leading-relaxed py-50"
+            >
+              <h2 class="lg:text-6xl text-4xl font-bold lg:w-[50%]">
+                Welcome to 306 Restaurant
+              </h2>
+              <p class="text-[#C6C6C8] lg:w-[60%] leading-normal text-xl">
+                Where the best Nigerian flavors come to life—right here in Cape
+                Town! From jollof to suya, we’ve got all the mouth-watering
+                dishes you’ve been dreaming about. Pull up a chair and let’s
+                sort that hunger out!
+              </p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
 
+    <!-- OUR  STORY -->
+    <section class="bg-[#FBFBFB]">
+      <div class="max-w-7xl mx-auto py-[50px] px-[30px]">
+        <div class="grid lg:grid-cols-2 items-center gap-4">
+          <!-- text flex -->
+          <div class="flex flex-col gap-5">
+            <h2 class="text-5xl font-bold">Our Story</h2>
+            <p class="text-lg">
+              We started with a simple idea: bring authentic Nigerian food to
+              the heart of Cape Town. Our journey began with a love for bold
+              flavors and a passion for sharing them with the world. Today,
+              we’re more than just a restaurant—we’re a community of food
+              lovers, united by the rich, spicy goodness of Nigerian cuisine.
+            </p>
+          </div>
+          <!-- image -->
+          <div class="relative z-20">
+            <img
+              class="h-[500px] rounded-md"
+              src="./images/Rectangle 119.svg"
+              alt=""
+            />
+            <img
+              class="absolute -top-10 right-0 lg:block hidden"
+              src="./images/Doodle 11.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <!--  -->
+        <div class="bg-black rounded-xl text-white my-8">
+          <!-- genral div -->
+          <div
+            class="grid lg:grid-cols-4 md:grid-cols-2 items-center gap-4 py-[50px] px-[50px]"
+          >
+            <!-- email -->
+            <div class="flex flex-col gap-2">
+              <img
+                class="w-[60px]"
+                src="./images/our-story-message.svg"
+                alt=""
+              />
+              <p class="text-base">
+                <a href="#hello@306restaurant.com">hello@306restaurant.com</a>
+              </p>
+            </div>
+            <!-- chat -->
+            <div class="flex flex-col gap-2">
+              <img class="w-[60px]" src="./images/our-story-chat.svg" alt="" />
+              <p class="text-base mt-2"><a href="#">Start new chat</a></p>
+            </div>
+            <!-- call line -->
+            <div class="flex flex-col gap-2">
+              <img
+                class="w-[60px]"
+                src="./images/our-story-telephone.svg"
+                alt=""
+              />
+              <p class="text-base mt-2">
+                <a href="#+1 (555) 000-0000">+1 (555) 000-0000</a>
+              </p>
+            </div>
+            <!-- location -->
+            <div class="flex flex-col gap-2">
+              <img
+                class="w-[60px]"
+                src="./images/our-story-location.svg"
+                alt=""
+              />
+              <p class="text-base mt-2">123 Sample St, Sydney NSW 2000 AU</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- working hours -->
+    <section class="bg-[#0E0E0E] ">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <div
+          class="flex lg:flex-row flex-col justify-between items-center gap-4"
+        >
+          <!-- text -->
+          <div class="leading-loose font-[Manrope] text-[#B4AAAA]">
+            <p class="text-xl">Monday: 9:00 AM – 10:00 PM</p>
+            <p class="text-lg">Tuesday: 9:00 AM – 10:00 PM</p>
+            <p class="text-lg">Wednesday: 9:00 AM – 10:00 PM</p>
+            <p class="text-lg">Thursday: 9:00 AM – 10:00 PM</p>
+            <p class="text-lg">Friday: 9:00 AM – 10:00 PM</p>
+            <p class="text-lg">Saturday: 9:00 AM – 10:00 PM</p>
+            <p class="text-lg">
+              Sunday: <span class="text-[#FF2B2A] font-extralight">Closed</span>
+            </p>
+          </div>
+          <!-- working hours image -->
+          <div class="relative z-30">
+            <img class="h-[150px]" src="./images/our-story-hours.svg" alt="" />
+            <img
+              class="lg:absolute -top-15 -left-20 h-[80px]"
+              src="./images/our-story-working.svg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- newsletter -->
+        <section class="max-w-6xl mx-auto px-[30px] py-[50px]">
+          <div class="bg-[#222222] rounded-lg p-[30px] ">
+            <div class="flex lg:flex-row flex-col justify-between items-center gap-5 z-50">
+              <!-- first div -->
+              <div class="flex flex-col gap-5 ">
+                <h2 class="text-[#FFFFFF] text-lg font-[Manrope]">
+                  NEWSLETTER
+                </h2>
+                <p class="text-lg font-semibold text-white">Don’t miss out on any Informations and Updates From us.</p>
+              </div>
+              <!-- second div -->
+               <div class="flex flex-col gap-3">
+                <div class="flex items-center relative">
+                  <input class="w-full px-2 py-3 rounded-md bg-white outline-none" type="email" placeholder="Enter your email">
+                  <button class="bg-white py-1 px-4 rounded-2xl border border-black absolute right-2
+                  ">Sign Up</button>
+                </div>
+                <div>
+                  <p class="text-white">By clicking Sign Up you're confirming that you agree with our Terms and Conditions.</p>
+                </div>
+               </div>
+               <!-- positined images -->
+                <div>
+                  <!-- <img class="absolute left-2 -bottom-15 h-[50px]" src="./images/Ellipse 29.svg" alt="">
+                  <img class="absolute left-9 -bottom-20 h-[30px]" src="./images/our-story-notification.svg" alt="">
+                  <img class="absolute" src="./images//our-story-poff-poff.svg" alt=""> -->
+                </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+      <!-- happy customer -->
+  <section class="bg-[#0D0D0D] text-white">
+    <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+      <div class="flex flex-col mb-5">
+        <h2 class="capitalize text-[#B4AAAA]  text-base font-normal ">Testimonials</h2>
+        <p class="text-3xl font-[fraunces] font-normal">Happy Customers</p>
+      </div>
+      <!--  -->
+      <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  items-center gap-4">
+        <div class="border border-gray-700 shadow-md rounded-xl p-5">
+          <div class="flex flex-col gap-2">
+            <div>
+              <h2 class="my-5">Amazing food and friendly staff!</h2>
+              <p class="lg:text-lg text-[#D4CACA]">The food was absolutely delicious, with each dish bursting
+                with flavor. The staff were incredibly friendly and attentive,
+                making sure that we had everything we needed throughout
+                the meal. The atmosphere was cozy and inviting, and the
+                decor added to the overall charm of the restaurant.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div>
+                <img class="rounded-3xl" src="./images/courtney.svg" alt="">
+              </div>
+              <div>
+                <h2 class="text-base">Courtney Henry</h2>
+                <p class="text-sm">Cape Town, SA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="border border-gray-700 shadow-md rounded-xl p-5">
+          <div class="flex flex-col gap-2">
+            <div>
+              <h2 class="my-5">Absolutely delicious!</h2>
+              <p class="lg:text-lg text-[#D4CACA]">I recently visited Crave Cafe and Restaurant and was
+                absolutely blown away by the delicious food. Each dish was
+                expertly prepared, with flavors that danced on my palate. The
+                staff were friendly and attentive, adding to the overall
+                wonderful dining experience.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div>
+                <img class="rounded-3xl" src="./images/Albert.svg" alt="">
+              </div>
+              <div>
+                <h2 class="text-base">Albert Flores</h2>
+                <p class="text-sm">Cape Town, SA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- slider -->
+      <div class="mt-6 relative">
+        <div class="flex end-5 gap-2 absolute ">
+          <img src="./images/Button - previous slide.svg" alt="">
+          <img src="./images/Button - next slide.svg" alt="">
+        </div>
+      </div>
     </div>
   </section>
-  
-  <!--  -->
 
-</body>
+    <!-- footer -->
+  <footer class="bg-black text-[#DFDFDF]">
+    <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2  items-center gap-4">
+        <!--  utility -->
+        <div>
+          <h2 class="mb-4">Utility</h2>
+          <ul class="leading-normal">
+            <li>Style Guide</li>
+            <li>License</li>
+            <li>Changelog</li>
+            <li>Reservation Policy</li>
+            <li>Private Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        <!-- Pages -->
+        <div>
+          <h2 class="mb-4">Pages</h2>
+          <ul class="leading-normal">
+            <li>Menu</li>
+            <li>Our Story</li>
+            <li>Gallery</li>
+            <li>Blogs</li>
+            <li>Contact Us</li>
+            <li>Reviews</li>
+          </ul>
+        </div>
+        <!-- restutrant logo -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <img src="./images/resturant-logo.svg" alt="">
+          </div>
+          <div>
+            <p>2118 Thornridge Cir. Syracuse,
+              Connecticut 35624</p>
+            <p class="mt-3">info@306resturant.com</p>
+          </div>
+        </div>
+        <!-- About -->
+        <div>
+          <h2>About Our Restaurant</h2>
+          <p class="text-sm my-3">306 Restaurant and Lounge is your spot for best of Nigerian cooked food in Cape Town
+            serving a variety of dishes from the well known smoky Jollof rice, fried rice, Perper soup ,Egusi soup,
+            vegetable </p>
+          <div class="flex items-center gap-3">
+            <img src="./images/twitter.svg" alt="">
+            <img src="./images/facebook.svg" alt="">
+            <img src="./images/youtube.svg" alt="">
+            <img src="./images/instagram.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <p class="mt-8 text-center">© 2023 Crave. All rights reserved.</p>
+    </div>
+  </footer>
 
+    <script src="./script.js"></script>
+  </body>
 </html>

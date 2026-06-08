@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Menu</title>
+  </head>
+
+  <body class="font-[Mnarope]">
+    <section class="relative z-50">
+      <!-- background image  -->
+      <div class="absolute inset-0">
+        <img
+          src="./images/our-story-bg.jpg"
+          class="w-full h-full object-cover bg-no-repeat"
+          alt=""
+        />
+        <!-- overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+      <!-- gradient colour -->
+      <!-- <div class="bg-gradient-to-r bg-black/30 from-[#132729] to-[#020706]/ absolute inset-0 "></div> -->
+      <!-- content -->
+      <div class="relative z-10">
+        <!-- header -->
+        <header class="text-white sticky top-0 z-20">
+          <div class="max-w-6xl mx-auto px-5 py-4">
+            <div
+              class="shadow shadow-white rounded-xl bg-black/30 backdrop-blur-sm"
+            >
+              <div class="flex justify-between items-center gap-4 p-3">
+                <div>
+                  <img class="h-[50px]" src="./images/logo-1.svg" alt="logo" />
+                </div>
+                <!-- nav links -->
+                <nav class="flex items-center gap-3">
+                  <ul class="lg:flex hidden items-center gap-5">
+                    <li class="cursor-pointer">Home</li>
+                    <li class="cursor-pointer">Our Story</li>
+                    <li class="cursor-pointer">Menu</li>
+                    <li class="cursor-pointer">Gallery</li>
+                    <li class="cursor-pointer">Contact us</li>
+                  </ul>
+                  <div class="lg:flex hidden items-center gap-3">
+                    <button
+                      class="bg-white text-base uppercase rounded-2xl py-2 px-4 text-black ml-3"
+                    >
+                      place an order
+                    </button>
+                    <div
+                      class="flex items-center gap-2 bg-[#202023] rounded-2xl px-4 py-2"
+                    >
+                      <div>
+                        <img
+                          class="h-[20px]"
+                          src="./images/cart-add.svg"
+                          alt="cart"
+                        />
+                      </div>
+                      <div class="flex flex-col items-center">
+                        <h2 class="font-semibold">R240</h2>
+                        <p class="text-sm">0 orders</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- harmbugger -->
+                  <div id="harmbugger" class="lg:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M3 6h18M3 12h18M3 18h18"
+                      />
+                    </svg>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <!-- drop down -->
+            <div class="bg-black/50 h-full w-full lg:hidden block rounded-lg">
+              <div
+                id="mobile"
+                class="hide flex flex-col items-center gap-4 py-[50px]"
+              >
+                <ul class="flex flex-col items-center gap-5 text-lg">
+                  <li class="cursor-pointer hover:opacity-80">Home</li>
+                  <li class="cursor-pointer hover:opacity-80">Our Story</li>
+                  <li class="cursor-pointer hover:opacity-80">Menu</li>
+                  <li class="cursor-pointer hover:opacity-80">Gallery</li>
+                  <li class="cursor-pointer hover:opacity-80">Contact us</li>
+                </ul>
+                <div class="flex flex-col items-center gap-5 mt-3">
+                  <button
+                    class="bg-white text-base uppercase rounded-2xl py-2 px-4 text-black ml-3"
+                  >
+                    place an order
+                  </button>
+                  <div
+                    class="flex items-center gap-2 bg-[#202023] rounded-2xl px-4 py-2"
+                  >
+                    <div>
+                      <img
+                        class="h-[20px]"
+                        src="./images/cart-add.svg"
+                        alt="cart"
+                      />
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <h2 class="font-semibold">R240</h2>
+                      <p class="text-sm">0 orders</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- welcome 360  -->
+            <div
+              class="flex flex-col justify-center gap-4 leading-relaxed py-50"
+            >
+              <h2 class="lg:text-6xl text-4xl font-bold lg:w-[50%]">
+                Restaurant Menu
+              </h2>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
+
+    <!-- today's menu -->
+    <section class="bg-[#0D0D0D] text-white">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <div class="flex lg:justify-between lg:flex-row md:flex-col flex-col items-center gap-5">
+          <div>
+            <p>Today’s Menu</p>
+          </div>
+          <div class="relative flex items-center">
+            <img class="absolute left-2" src="./images/Search.svg " alt="" />
+            <input
+              class="lg:w-96 w-80 border border-gray-700 rounded-2xl text-[#B4AAAA] bg-transparent py-1 px-8 outline-none"
+              type="search"
+              name=""
+              id=""
+              placeholder="Search for meals"
+            />
+            <button class="py-1 px-4 rounded-xl absolute right-1 bg-[#222222]">
+              Search
+            </button>
+          </div>
+        </div>
+        <!--  -->
+        <div class="bg-[#222222] p-2 rounded-2xl my-10">
+          <ul
+            class=" grid lg:grid-cols-7 grid-cols-3 items-center gap-2 text-[#B4AAAA] text-base"
+          >
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Regular
+            </li>
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Swallow
+            </li>
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Catch of the day
+            </li>
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Proteins
+            </li>
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Extra
+            </li>
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Snacks
+            </li>
+            <li
+              class="hover:bg-[#B31F1F] hover:text-white hover:py-1 px-4 hover:rounded-2xl transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Drinks
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regular -->
+    <section class="bg-[#0D0D0D] text-white">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <h2 class="font-bold mb-7 text-xl">Regular</h2>
+        <!-- menu list -->
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 items-center gap-4">
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- swallow -->
+    <section class="bg-[#0D0D0D] text-white">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <h2 class="font-bold mb-7 text-xl">Swallow</h2>
+        <!-- menu list -->
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 items-center gap-4">
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- catch of the day -->
+    <section class="bg-[#0D0D0D] text-white">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <h2 class="font-bold mb-7 text-xl">Catch of the Day</h2>
+        <!-- menu list -->
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 items-center gap-4">
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="bg-[#222222] rounded-lg p-4">
+            <div class="flex items-center gap-4">
+              <!-- text div -->
+              <div class="flex flex-col gap-2 text-base">
+                <h2 class="font-bold">Jellof Rice</h2>
+                <p class="text-[#D4CACA]">
+                  4 protiens, eggs, chicken, turkey & beef
+                </p>
+                <h2>R250.99</h2>
+              </div>
+              <!-- image -->
+              <div>
+                <img src="./images/menu-jollof-card.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- craving -->
+    <section class="bg-[#0D0D0D] text-white z-50 relative">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <div class="bg-[#6F1413] rounded-lg lg:pl-8 p-5">
+          <div class="flex lg:flex-row flex-col items-center gap-5">
+            <!--  -->
+            <div class="flex flex-col gap-4">
+              <p class="text-xl font-semibold lg:w-[70%]">
+                Are you Craving the rich, authentic tastes of Nigeria Food in
+                Cape Town?
+                <span class="text-[#F2B705]">We’ve Got you covered</span>
+              </p>
+              <div>
+                <button class="bg-white rounded-2xl py-2 px-5 text-black">
+                  Place an Order here
+                </button>
+              </div>
+            </div>
+            <!--  -->
+            <div>
+              <img class="" src="./images/craving-image.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-black text-[#DFDFDF]">
+      <div class="max-w-6xl mx-auto px-[30px] py-[50px]">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 items-center gap-4">
+          <!--  utility -->
+          <div>
+            <h2 class="mb-4">Utility</h2>
+            <ul class="leading-normal">
+              <li>Style Guide</li>
+              <li>License</li>
+              <li>Changelog</li>
+              <li>Reservation Policy</li>
+              <li>Private Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+          <!-- Pages -->
+          <div>
+            <h2 class="mb-4">Pages</h2>
+            <ul class="leading-normal">
+              <li>Menu</li>
+              <li>Our Story</li>
+              <li>Gallery</li>
+              <li>Blogs</li>
+              <li>Contact Us</li>
+              <li>Reviews</li>
+            </ul>
+          </div>
+          <!-- restutrant logo -->
+          <div class="flex flex-col gap-6">
+            <div>
+              <img src="./images/resturant-logo.svg" alt="" />
+            </div>
+            <div>
+              <p>2118 Thornridge Cir. Syracuse, Connecticut 35624</p>
+              <p class="mt-3">info@306resturant.com</p>
+            </div>
+          </div>
+          <!-- About -->
+          <div>
+            <h2>About Our Restaurant</h2>
+            <p class="text-sm my-3">
+              306 Restaurant and Lounge is your spot for best of Nigerian cooked
+              food in Cape Town serving a variety of dishes from the well known
+              smoky Jollof rice, fried rice, Perper soup ,Egusi soup, vegetable
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="./images/twitter.svg" alt="" />
+              <img src="./images/facebook.svg" alt="" />
+              <img src="./images/youtube.svg" alt="" />
+              <img src="./images/instagram.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <p class="mt-8 text-center">© 2023 Crave. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
